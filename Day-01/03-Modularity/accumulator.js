@@ -14,23 +14,24 @@ acc.divide(2);
 console.log(acc.getResult()) // => 250
 
 */
-
-var result= 0;
 console.log('loading accumulator');
-module.exports = {
-	add : function(x){
-		result += x;
-	},
-	subtract : function(x){
-		result -= x;
-	},
-	multiply : function(x){
-		result *= x;
-	},
-	divide : function(x){
-		result /= x;
-	},
-	getResult : function(){
-		return result;
-	}
-};
+module.exports = function(){
+	var result= 0;
+	return {
+		add : function(x){
+			result += x;
+		},
+		subtract : function(x){
+			result -= x;
+		},
+		multiply : function(x){
+			result *= x;
+		},
+		divide : function(x){
+			result /= x;
+		},
+		getResult : function(){
+			return result;
+		}
+	};
+}
