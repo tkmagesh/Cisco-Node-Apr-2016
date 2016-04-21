@@ -44,7 +44,6 @@ var server = http.createServer(function(req, res){
 			res.write(result.toString());
 			res.end();
 		});
-		
 	} else {
 		res.statusCode = 404;
 		res.end();
@@ -54,5 +53,8 @@ server.listen(8080);
 console.log('server listening on 8080!');
 
 /*
-/calculator?op=add&n1=100&n2=200
+16, 34-42 dataParsing
+8-11, 18-26 - staticServerHanlder
+26-47 - calculatorReqHandler
+47-50 - notFoundHandler
 */
